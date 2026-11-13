@@ -1,12 +1,17 @@
 def calculate_gc_content(sequence: str) -> float:
-    g_count = sequence.count("G")
-    c_count = sequence.count("C")
-    total_length = len(sequence)
-    
+    seq = sequence.upper()
+    if not seq:
+        return 0.0
+
+    g_count = seq.count("G")
+    c_count = seq.count("C")
+    total_length = len(seq)
+
     return ((g_count + c_count) / total_length) * 100
 
 def transcribe_dna(sequence: str) -> str:
     return sequence.upper().replace("T", "U")
+    
 #Defining the reverse complement funtion
 def reverse_complement(sequence: str) -> str:
     complement_map = {"A": "T", "T": "A", "C": "G", "G": "C"}
