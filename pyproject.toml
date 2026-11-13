@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "locusloom"
+version = "0.1.0"
+description = "An open-source computational genetics and gene mapping suite."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dependencies = [
+    "biopython",
+    "numpy",
+    "pandas",
+]
+
+[project.scripts]
+locusloom = "locusloom.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

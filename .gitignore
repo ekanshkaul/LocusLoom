@@ -1,0 +1,25 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+bio_env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Large genomic data files
+*.fastq
+*.fq
+*.bam
+*.sam
+*.vcf.gz
+
+# OS files
+.DS_Store
+Thumbs.db
